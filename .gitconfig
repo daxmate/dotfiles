@@ -1,0 +1,28 @@
+[user]
+	name = dax
+	email = dax26d@gmail.com
+[core]
+	editor = vim
+[http]
+	sslverify = false
+	proxy = 127.0.0.1:8001
+	version = HTTP/1.1
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	required = true
+[url "https://"]
+	insteadof = git://
+[color]
+	ui = true
+[https]
+	proxy = 127.0.0.1:8001
+[init]
+	defaultBranch = main
+[merge]
+	tool = opendiff
+[mergetool]
+	KeepBackup = false
+[diff]
+	tool = opendiff
+
