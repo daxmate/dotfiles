@@ -167,3 +167,5 @@ export ZPLUG_HOME=/opt/homebrew/opt/zplug
 eval $(thefuck --alias)
 
 figlet "HELLO DAX" | lolcat
+
+export DBUS_SESSION_BUS_ADDRESS="unix:path=$DBUS_LAUNCHD_SESSION_BUS_SOCKET"
