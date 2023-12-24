@@ -143,7 +143,7 @@ set background=light
 syntax enable
 filetype plugin indent on
 colorscheme papercolor
-set guifont=DejaVuSansMonoPowerline:h18
+set guifont=JetBrainsMonoNL-Regular:h18
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'default'
 let g:airline_powerline_fonts = 1
