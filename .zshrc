@@ -1,10 +1,8 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=/opt/homebrew/bin:/usr/bin:/bin:/usr/local/bin:/opt/homebrew/Cellar/python@3.10/3.10.10/bin/:$PATH
+export PATH=/opt/local/libexec/gnubin/:$PATH
+export PATH=/opt/homebrew/bin:$PATH
 
 export PATH="/opt/homebrew/sbin:$PATH"
-export PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"
-export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
-export PATH="/opt/homebrew/opt/curl/bin:$PATH"
 
 export CPLUS_INCLUDE_PATH=/usr/local/include
 export LIBRARY_PATH=/usr/local/lib
@@ -80,6 +78,7 @@ HYPHEN_INSENSITIVE="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 
+source /opt/homebrew/share/zsh-autopair/autopair.zsh
 source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/opt/homebrew/share/zsh-syntax-highlighting/highlighters
@@ -134,8 +133,8 @@ alias vi=nvim
 alias buildnhk=~/dotfiles/buildnhk.sh
 alias dsq='ssh dax@192.168.31.24 -t "export PATH=/opt/bin:/opt/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin && /opt/bin/zsh -l"'
 alias lwarp="lwarpmk print && lwarpmk html && lwarpmk limages"
-export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
-export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
+# export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+# export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
 # export CXX="/opt/homebrew/Cellar/llvm/16.0.0/bin/clang++"
 export CXX="/opt/homebrew/bin/g++-13"
 export CC="/opt/homebrew/bin/gcc-13"
@@ -162,8 +161,6 @@ export CDPATH=~/Codes
 export ZVM_VI_EDITOR=nvim
 export ZPLUG_HOME=/opt/homebrew/opt/zplug
 
-# export commands in json format
-# export CMAKE_EXPORT_COMPILE_COMMANDS=1
 
 # settign for autojump
 [ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
@@ -172,5 +169,3 @@ export ZPLUG_HOME=/opt/homebrew/opt/zplug
 eval $(thefuck --alias)
 
 figlet "HELLO DAX" | lolcat
-
-export DBUS_SESSION_BUS_ADDRESS="unix:path=$DBUS_LAUNCHD_SESSION_BUS_SOCKET"
