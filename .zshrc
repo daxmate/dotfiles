@@ -79,12 +79,20 @@ HYPHEN_INSENSITIVE="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 
+source /opt/homebrew/share/zsh-you-should-use/you-should-use.plugin.zsh
 source /opt/homebrew/share/zsh-autopair/autopair.zsh
 source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/opt/homebrew/share/zsh-syntax-highlighting/highlighters
+# settign for autojump
+[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
 
-plugins=(git sudo macos history fasd)
+# settings for thefuck
+eval $(thefuck --alias)
+
+
+plugins=(git sudo macos history zsh-autosuggestions zsh-syntax-highlighting compleat dirhistory git-auto-fetch gitignore
+	ripgrep timer zoxide)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -144,11 +152,14 @@ alias pyin='pip install'
 alias brin='brew install'
 alias ytd='yt-dlp -N 5'
 export LC_ALL=zh_CN.UTF-8
+alias ez="vim ~/.zshrc"
+alias sz="source ~/.zshrc"
 
+# use vim to edit command
 set -o vi
 export FCEDIT=nvim
 
-export NVM_DIR="$HOME/.nvm"
+# export NVM_DIR="$HOME/.nvm"
 
 # proxy list
 alias proxy='export all_proxy=socks5://127.0.0.1:1081'
@@ -156,17 +167,12 @@ alias unproxy='unset all_proxy'
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+bindkey "ç" fzf-cd-widget
 
 export NNN_PLUG='f:finder;o:fzopen;p:mocq;d:diffs;t:nmount;v:imgview'
-export CDPATH=~/Codes
 export ZVM_VI_EDITOR=nvim
 export ZPLUG_HOME=/opt/homebrew/opt/zplug
 
 
-# settign for autojump
-[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
-
-# settings for thefuck
-eval $(thefuck --alias)
-
 figlet "HELLO DAX" | lolcat
+cd ~/codes/
