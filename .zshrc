@@ -154,6 +154,7 @@ alias ytd='yt-dlp -N 5'
 export LC_ALL=zh_CN.UTF-8
 alias ez="vim ~/.zshrc"
 alias sz="source ~/.zshrc"
+alias ls=exa
 
 # use vim to edit command
 set -o vi
