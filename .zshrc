@@ -91,7 +91,7 @@ source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 eval $(thefuck --alias)
 
 
-plugins=(git sudo macos history  compleat dirhistory git-auto-fetch gitignore
+plugins=(git sudo macos compleat myhistory dirhistory git-auto-fetch gitignore
 	ripgrep timer zoxide aliases)
 
 source $ZSH/oh-my-zsh.sh
