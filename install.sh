@@ -23,3 +23,17 @@ if [[ ! -f ~/.latexmkrc ]]; then
 	ln -s ~/dotfiles/.latexmkrc ~
 	echo "created symbol link for .latexmkrc"
 fi
+
+
+if [[ ! -f ~/.oh-my-zsh/custom/themes/agnoster-customized.zsh-theme ]]; then
+	ln -s ~/dotfiles/agnoster-customized.zsh-theme ~/.oh-my-zsh/custom/themes/agnoster-customized.zsh-theme
+	echo "created symbol link for agnoster-customized theme"
+fi
+
+
+if [[ ! -d ~/.oh-my-zsh/custom/plugins/myhistory ]]; then
+	ln -s ~/dotfiles/myhistory ~/.oh-my-zsh/custom/plugins/myhistory
+	echo "created symbol link for myhistory plugin"
+fi
+
+
