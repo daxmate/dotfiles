@@ -158,6 +158,8 @@ alias ls=eza
 
 # use vim to edit command
 set -o vi
+# set vi-mode escape key to jk
+ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
 export FCEDIT=nvim
 
 # export NVM_DIR="$HOME/.nvm"
