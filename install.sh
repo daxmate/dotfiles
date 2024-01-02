@@ -33,56 +33,60 @@ if [[ ! -d ~/.oh-my-zsh/custom/plugins/myhistory ]]; then
 fi
 
 function install(){
-	cmd=$1
+	cmd=$2
 	if type $cmd > /dev/null 2>&1; then
 		echo "$cmd already existed"
 	else
-		brew install $cmd
+		if [[ "$1" = formulae ]]; then
+			brew install $cmd
+		else
+			brew install --casks $cmd
+		fi
 	fi
 }
 
 # formulae
-install rg
-install eza
-install autojump
-install fd
-install ffmpeg
-install fzf
-install figlet
-install gcc
-install git
-install llvm
-install lua
-install luarocks
-install python
-install thefuck
-install tree
-install yt-dlp
-install neovim
-install zoxide
-install zsh-autopair
-install zsh-autosuggestions
-install zsh-syntax-highlighting
-install zsh-vi-mode
-install zsh-you-should-use
+install formulae rg
+install formulae eza
+install formulae autojump
+install formulae fd
+install formulae ffmpeg
+install formulae fzf
+install formulae figlet
+install formulae gcc
+install formulae git
+install formulae llvm
+install formulae lua
+install formulae luarocks
+install formulae python
+install formulae thefuck
+install formulae tree
+install formulae yt-dlp
+install formulae neovim
+install formulae zoxide
+install formulae zsh-autopair
+install formulae zsh-autosuggestions
+install formulae zsh-syntax-highlighting
+install formulae zsh-vi-mode
+install formulae zsh-you-should-use
 
 # casks
-install alt-tab
-install mactex
-install sioyek
-install anki
-install macvim
-install squirrel
-install calibre
-install mks
-install tex-live-utility
-install google-chrome
-install mpv
-install wechat
-install iina
-install obs
-install wpsoffice-cn
-install karabiner-elements
-install pycharm-ce
-install keycastr
-install rectangle
+install casks alt-tab
+install casks mactex
+install casks sioyek
+install casks anki
+install casks macvim
+install casks squirrel
+install casks calibre
+install casks mks
+install casks tex-live-utility
+install casks google-chrome
+install casks mpv
+install casks wechat
+install casks iina
+install casks obs
+install casks wpsoffice-cn
+install casks karabiner-elements
+install casks pycharm-ce
+install casks keycastr
+install casks rectangle
