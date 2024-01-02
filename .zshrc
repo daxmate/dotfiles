@@ -179,3 +179,4 @@ export ZPLUG_HOME=/opt/homebrew/opt/zplug
 
 figlet "HELLO DAX" | lolcat
 cd ~/codes/
+autopair-init
