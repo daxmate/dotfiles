@@ -91,8 +91,8 @@ export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/opt/homebrew/share/zsh-syntax-highlightin
 eval $(thefuck --alias)
 
 
-plugins=(git sudo macos history zsh-autosuggestions zsh-syntax-highlighting compleat dirhistory git-auto-fetch gitignore
-	ripgrep timer zoxide)
+plugins=(git sudo macos history  compleat dirhistory git-auto-fetch gitignore
+	ripgrep timer zoxide aliases)
 
 source $ZSH/oh-my-zsh.sh
 
