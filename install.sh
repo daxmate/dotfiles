@@ -20,6 +20,13 @@ if [[ ! -f ~/.latexmkrc ]]; then
 	echo "created symbol link for .latexmkrc"
 fi
 
+if [[ ! -f ~/.local/share/nvim/site/pack/packer/start/neoformat/autoload/neoformat/formatters/cpp.vim ]]; then
+	ln -s ~/dotfiles/cpp-neoformatter.vim ~/.local/share/nvim/site/pack/packer/start/neoformat/autoload/neoformat/formatters/cpp.vim
+	echo "created symbol link for cpp neoformatter"
+else
+	ln -fs ~/dotfiles/cpp-neoformatter.vim ~/.local/share/nvim/site/pack/packer/start/neoformat/autoload/neoformat/formatters/cpp.vim
+	echo "cpp neoformatter existed, force linking to the one in dotfiles folder"
+fi
 
 if [[ ! -f ~/.oh-my-zsh/custom/themes/agnoster-customized.zsh-theme ]]; then
 	ln -s ~/dotfiles/agnoster-customized.zsh-theme ~/.oh-my-zsh/custom/themes/agnoster-customized.zsh-theme
