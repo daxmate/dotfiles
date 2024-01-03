@@ -181,3 +181,4 @@ export ZPLUG_HOME=/opt/homebrew/opt/zplug
 figlet "HELLO DAX" | lolcat
 cd ~/codes/
 autopair-init
+source ~/.oh-my-zsh/plugins/zsh-interactive-cd/zsh-interactive-cd.plugin.zsh
