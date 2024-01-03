@@ -154,8 +154,24 @@ alias help=run-help
 export FCEDIT=nvim
 bindkey -v
 bindkey -M viins jk vi-cmd-mode
-bindkey -M vicmd vv edit-command-line
+bindkey -M visual v edit-command-line
+# set different cursor shape in different vi mode
+function zle-keymap-select {
+  if [[ ${KEYMAP} == vicmd ]] || [[ $1 = 'block' ]]; then
+    echo -ne '\e[1 q'
+  elif [[ ${KEYMAP} == main ]] || [[ ${KEYMAP} == viins ]] || [[ ${KEYMAP} = '' ]] || [[ $1 = 'beam' ]]; then
+    echo -ne '\e[5 q'
+  fi
+}
+zle -N zle-keymap-select
 
+zle-line-init() {
+  zle -K viins  # 初始化`vi insert`作为键映射（如果在其他地方已经设置了`bindkey -V`，则可以删除）
+  echo -ne "\e[5 q"
+}
+zle -N zle-line-init
+echo -ne '\e[5 q'  # 启动时使用光束形状的光标。
+preexec() { echo -ne '\e[5 q' ;}  # 每个新提示都使用光束形状的光标。
 
 # proxy list
 alias proxy='export all_proxy=socks5://127.0.0.1:1081'
