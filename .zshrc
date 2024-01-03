@@ -145,6 +145,9 @@ export LC_ALL=zh_CN.UTF-8
 alias ez="vim ~/.zshrc"
 alias sz="source ~/.zshrc"
 alias ls=eza
+unalias run-help
+autoload run-help
+alias help=run-help
 
 
 # vim setup
