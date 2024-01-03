@@ -145,7 +145,9 @@ export LC_ALL=zh_CN.UTF-8
 alias ez="vim ~/.zshrc"
 alias sz="source ~/.zshrc"
 alias ls=eza
-unalias run-help
+if alias run-help >/dev/null 2>&1; then
+	unalias run-help
+fi
 autoload run-help
 alias help=run-help
 
@@ -155,23 +157,19 @@ export FCEDIT=nvim
 bindkey -v
 bindkey -M viins jk vi-cmd-mode
 bindkey -M visual v edit-command-line
-# set different cursor shape in different vi mode
-function zle-keymap-select {
-  if [[ ${KEYMAP} == vicmd ]] || [[ $1 = 'block' ]]; then
-    echo -ne '\e[1 q'
-  elif [[ ${KEYMAP} == main ]] || [[ ${KEYMAP} == viins ]] || [[ ${KEYMAP} = '' ]] || [[ $1 = 'beam' ]]; then
-    echo -ne '\e[5 q'
-  fi
-}
-zle -N zle-keymap-select
 
-zle-line-init() {
-  zle -K viins  # 初始化`vi insert`作为键映射（如果在其他地方已经设置了`bindkey -V`，则可以删除）
-  echo -ne "\e[5 q"
+function zle-line-init zle-keymap-select {
+	if [[ ${KEYMAP} == vicmd ]]; then
+		RPS1="%{%K{204}%}%F{white}NORMAL%f%k%"
+	else
+		RPS1="%{%K{204}%}%F{white}INSERT%f%k%"
+	fi
+  RPS2=${RPS1}
+  zle reset-prompt
 }
+
 zle -N zle-line-init
-echo -ne '\e[5 q'  # 启动时使用光束形状的光标。
-preexec() { echo -ne '\e[5 q' ;}  # 每个新提示都使用光束形状的光标。
+zle -N zle-keymap-select
 
 # proxy list
 alias proxy='export all_proxy=socks5://127.0.0.1:1081'
