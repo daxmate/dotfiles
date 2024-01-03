@@ -1,6 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=/opt/local/libexec/gnubin/:$PATH
 export PATH=/opt/homebrew/bin:$PATH
+export PATH=~/bin:$PATH
 
 export PATH="/opt/homebrew/sbin:$PATH"
 
