@@ -24,3 +24,5 @@
 [diff]
 	tool = opendiff
 
+[credential]
+	helper = store
