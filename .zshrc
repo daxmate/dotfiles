@@ -79,6 +79,10 @@ zstyle ':completion:*' completer _expand _approximate _complete _correct
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 
+
+plugins=(git sudo macos compleat myhistory dirhistory git-auto-fetch gitignore
+	ripgrep timer zoxide aliases zsh-interactive-cd)
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 bindkey "ç" fzf-cd-widget
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -91,11 +95,6 @@ source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 # settings for thefuck
 eval $(thefuck --alias)
-
-
-plugins=(git sudo macos compleat myhistory dirhistory git-auto-fetch gitignore
-	ripgrep timer zoxide aliases zsh-interactive-cd)
-
 source ~/.oh-my-zsh/plugins/zsh-interactive-cd/zsh-interactive-cd.plugin.zsh
 source $ZSH/oh-my-zsh.sh
 
