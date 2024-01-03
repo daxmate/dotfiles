@@ -84,22 +84,9 @@ zstyle ':completion:*' completer _expand _approximate _complete _correct
 plugins=(git sudo macos compleat myhistory dirhistory git-auto-fetch gitignore
 	ripgrep timer zoxide aliases zsh-interactive-cd)
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-bindkey "ç" fzf-cd-widget
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $(brew --prefix)/share/zsh-you-should-use/you-should-use.plugin.zsh
-source $(brew --prefix)/share/zsh-autopair/autopair.zsh
-source $(brew --prefix)/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
-source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-# settign for autojump
-[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
-
-# settings for thefuck
-eval $(thefuck --alias)
-source ~/.oh-my-zsh/plugins/zsh-interactive-cd/zsh-interactive-cd.plugin.zsh
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
+# # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -159,26 +146,35 @@ alias ez="vim ~/.zshrc"
 alias sz="source ~/.zshrc"
 alias ls=eza
 
-# use vim to edit command
-set -o vi
-# set vi-mode escape key to jk
-ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
-export FCEDIT=nvim
 
-# export NVM_DIR="$HOME/.nvm"
+# vim setup
+export FCEDIT=nvim
+bindkey -v
+bindkey -M viins jk vi-cmd-mode
+bindkey -M vicmd vv edit-command-line
+
 
 # proxy list
 alias proxy='export all_proxy=socks5://127.0.0.1:1081'
 alias unproxy='unset all_proxy'
 
 
-
 export NNN_PLUG='f:finder;o:fzopen;p:mocq;d:diffs;t:nmount;v:imgview'
-export ZVM_VI_EDITOR=nvim
 export ZPLUG_HOME=/opt/homebrew/opt/zplug
 
 
 figlet "HELLO DAX" | lolcat
 cd ~/codes/
-autopair-init
+bindkey "ç" fzf-cd-widget
+# # settings for thefuck
+eval $(thefuck --alias)
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $(brew --prefix)/share/zsh-you-should-use/you-should-use.plugin.zsh
+source $(brew --prefix)/share/zsh-autopair/autopair.zsh
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# settign for autojump
+[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
 source ~/.oh-my-zsh/plugins/zsh-interactive-cd/zsh-interactive-cd.plugin.zsh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source ~/.oh-my-zsh/plugins/zsh-interactive-cd/zsh-interactive-cd.plugin.zsh
+autopair-init
