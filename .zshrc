@@ -160,11 +160,17 @@ bindkey -M visual v edit-command-line
 
 function zle-line-init zle-keymap-select {
 	if [[ ${KEYMAP} == vicmd ]]; then
-		RPS1="%{%K{204}%}%F{white}NORMAL%f%k%"
+		RPS1="%{%K{204}%}%F{white}%B NORMAL %b%f%k%"
 	else
-		RPS1="%{%K{204}%}%F{white}INSERT%f%k%"
+		RPS1="%{%K{204}%}%F{white}%B INSERT %b%f%k%"
 	fi
   RPS2=${RPS1}
+	if [[ ${KEYMAP} == vicmd ]] || [[ $1 = 'block' ]]; then
+    echo -ne '\e[1 q'
+  elif [[ ${KEYMAP} == main ]] || [[ ${KEYMAP} == viins ]] || [[ ${KEYMAP} = '' ]] || [[ $1 = 'beam' ]]; then
+    echo -ne '\e[5 q'
+  fi
+
   zle reset-prompt
 }
 
