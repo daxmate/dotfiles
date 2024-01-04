@@ -169,7 +169,7 @@ alias help=run-help
 export FCEDIT=nvim
 bindkey -v
 bindkey -M viins jk vi-cmd-mode
-bindkey -M visual v edit-command-line
+bindkey -M vicmd vv edit-command-line
 
 function zle-line-init zle-keymap-select {
 	if [[ ${KEYMAP} == vicmd ]]; then
