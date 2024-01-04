@@ -198,7 +198,6 @@ export ZPLUG_HOME=/opt/homebrew/opt/zplug
 
 
 figlet "HELLO DAX" | lolcat
-cd ~/codes/
 bindkey "ç" fzf-cd-widget
 # # settings for thefuck
 eval $(thefuck --alias)
