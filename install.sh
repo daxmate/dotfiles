@@ -116,7 +116,6 @@ done
 
 for cask in $casks
 do
-	echo $cask
 	install cask $cask
 done
 
