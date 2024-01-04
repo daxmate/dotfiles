@@ -42,9 +42,15 @@ if [[ ! -d ~/.oh-my-zsh/custom/plugins/myhistory ]]; then
 fi
 
 if [[ ! -d ~/.oh-my-zsh/custom/plugins/mytimer ]]; then
-	ln -s ~/dotfiles/myhistory ~/.oh-my-zsh/custom/plugins/mytimer
+	ln -s ~/dotfiles/mytimer ~/.oh-my-zsh/custom/plugins/mytimer
 	echo "created symbol link for mytimer plugin"
 fi
+
+if [[ ! -d ~/.oh-my-zsh/custom/plugins/mydirhistory ]]; then
+	ln -s ~/dotfiles/mydirhistory ~/.oh-my-zsh/custom/plugins/mydirhistory
+	echo "created symbol link for mydirhistory plugin"
+fi
+
 
 function install(){
 	cmd=$2
