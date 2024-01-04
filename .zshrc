@@ -81,8 +81,8 @@ zstyle ':completion:*' completer _expand _approximate _complete _correct
 # Add wisely, as too many plugins slow down shell startup.
 
 
-plugins=(git sudo macos compleat myhistory dirhistory git-auto-fetch gitignore
-	ripgrep timer zoxide aliases zsh-interactive-cd)
+plugins=(git sudo macos myhistory compleat mytimer dirhistory git-auto-fetch gitignore
+	ripgrep zoxide aliases zsh-interactive-cd)
 
 source $ZSH/oh-my-zsh.sh
 
