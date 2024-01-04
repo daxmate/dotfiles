@@ -83,10 +83,8 @@ zstyle ':completion:*' completer _expand _approximate _complete _correct
 
 plugins=(
 aliases
-compleat
 mydirhistory
 git
-git-auto-fetch
 gitignore
 macos
 myhistory
