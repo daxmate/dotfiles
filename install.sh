@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 # create symbol links for configuration files
 
 if [[ ! -f ~/.vimrc ]]; then
@@ -39,61 +41,82 @@ if [[ ! -d ~/.oh-my-zsh/custom/plugins/myhistory ]]; then
 	echo "created symbol link for myhistory plugin"
 fi
 
+if [[ ! -d ~/.oh-my-zsh/custom/plugins/mytimer ]]; then
+	ln -s ~/dotfiles/myhistory ~/.oh-my-zsh/custom/plugins/mytimer
+	echo "created symbol link for mytimer plugin"
+fi
+
 function install(){
 	cmd=$2
-	if type $cmd > /dev/null 2>&1; then
+	if [[ -n `brew list | rg $cmd` ]]; then
 		echo "$cmd already existed"
 	else
-		if [[ "$1" = formulae ]]; then
+		if [[ "$1" = formula ]]; then
 			brew install $cmd
 		else
-			brew install --casks $cmd
+			brew install --cask --force $cmd
 		fi
 	fi
 }
 
 # formulae
-install formulae rg
-install formulae eza
-install formulae autojump
-install formulae fd
-install formulae ffmpeg
-install formulae fzf
-install formulae figlet
-install formulae gcc
-install formulae git
-install formulae llvm
-install formulae lua
-install formulae luarocks
-install formulae python
-install formulae thefuck
-install formulae tree
-install formulae yt-dlp
-install formulae neovim
-install formulae zoxide
-install formulae zsh-autopair
-install formulae zsh-autosuggestions
-install formulae zsh-syntax-highlighting
-install formulae zsh-vi-mode
-install formulae zsh-you-should-use
+formulae=(
+autojump
+eza
+fd
+ffmpeg
+figlet
+fzf
+gcc
+git
+llvm
+lua
+luarocks
+neovim
+python
+rg
+thefuck
+tree
+yt-dlp
+zoxide
+zsh-autopair
+zsh-autosuggestions
+zsh-syntax-highlighting
+zsh-you-should-use
+)
+
 
 # casks
-install casks alt-tab
-install casks mactex
-install casks sioyek
-install casks anki
-install casks macvim
-install casks squirrel
-install casks calibre
-install casks mks
-install casks tex-live-utility
-install casks google-chrome
-install casks mpv
-install casks wechat
-install casks iina
-install casks obs
-install casks wpsoffice-cn
-install casks karabiner-elements
-install casks pycharm-ce
-install casks keycastr
-install casks rectangle
+casks=(
+alt-tab
+anki
+calibre
+google-chrome
+iina
+karabiner-elements
+keycastr
+mactex
+macvim
+mks
+mpv
+obs
+pycharm-ce
+rectangle
+sioyek
+squirrel
+tex-live-utility
+wechat
+wpsoffice-cn
+)
+
+for formula in $formulae
+do
+	install formula $formula
+done
+
+for cask in $casks
+do
+	echo $cask
+	install cask $cask
+done
+
