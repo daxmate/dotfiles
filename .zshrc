@@ -165,6 +165,7 @@ alias help=run-help
 
 # vim setup
 export FCEDIT=nvim
+export EDITOR=nvim
 bindkey -v
 bindkey -M viins jk vi-cmd-mode
 bindkey -M vicmd vv edit-command-line
