@@ -52,18 +52,25 @@ if [[ ! -d ~/.oh-my-zsh/custom/plugins/mydirhistory ]]; then
 fi
 
 
+installed_formulae=(`brew list --formulae`)
+installed_casks=(`brew list --casks`)
 function install(){
 	cmd=$2
-	if [[ -n `brew list | rg $cmd` ]]; then
-		echo "$cmd already existed"
-	else
-		if [[ "$1" = formula ]]; then
+	if [[ "$1" == formula ]]; then
+		if [[ ${installed_formulae[(Ie)$cmd]} == 0 ]]; then
 			brew install $cmd
 		else
+			echo "$cmd already existed"
+		fi
+	else
+		if [[ ${installed_casks[(Ie)$cmd]} == 0 ]]; then
 			brew install --cask --force $cmd
+		else
+			echo "$cmd already existed"
 		fi
 	fi
 }
+
 
 # formulae
 formulae=(
@@ -117,11 +124,11 @@ wpsoffice-cn
 
 for formula in $formulae
 do
-	install formula $formula
+		install formula $formula
 done
 
 for cask in $casks
 do
-	install cask $cask
+		install cask $cask
 done
 
