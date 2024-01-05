@@ -88,7 +88,7 @@ lua
 luarocks
 neovim
 python
-rg
+ripgrep
 thefuck
 tree
 yt-dlp
