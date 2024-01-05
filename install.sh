@@ -95,6 +95,7 @@ yt-dlp
 zoxide
 zsh-autopair
 zsh-autosuggestions
+zsh-completions
 zsh-syntax-highlighting
 zsh-you-should-use
 )
