@@ -213,3 +213,4 @@ autopair-init
 
 # add zsh-completions function folder to the FPATH
 FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
