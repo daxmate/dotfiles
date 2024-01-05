@@ -51,7 +51,7 @@ if [[ ! -d ~/.oh-my-zsh/custom/plugins/mydirhistory ]]; then
 	echo "created symbol link for mydirhistory plugin"
 fi
 
-ln -fs ~/dotfiles/pac.js ~/Library/Application Support/V2RayX/pac/pac.js
+ln -fs ~/dotfiles/pac.js ~/Library/Application\ Support/V2RayX/pac/pac.js
 
 installed_formulae=(`brew list --formulae`)
 installed_casks=(`brew list --casks`)
