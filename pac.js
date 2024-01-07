@@ -200,6 +200,7 @@ var domains = [
 	"bitbucket.io",
 	"torrentmac.net",
 	"ptchdbits.co",
+	"zhangchao.space",
 	"monica.im",
 	"brew.sh",
 	"anthropic.com",
