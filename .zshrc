@@ -95,6 +95,9 @@ zoxide
 zsh-interactive-cd
 )
 
+# add zsh-completions function folder to the FPATH
+FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
 source $ZSH/oh-my-zsh.sh
 
 # # User configuration
@@ -210,7 +213,3 @@ source ~/.oh-my-zsh/plugins/zsh-interactive-cd/zsh-interactive-cd.plugin.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 source ~/.oh-my-zsh/plugins/zsh-interactive-cd/zsh-interactive-cd.plugin.zsh
 autopair-init
-
-# add zsh-completions function folder to the FPATH
-FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
-FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
