@@ -85,6 +85,7 @@ fzf
 gcc
 git
 llvm
+lolcat
 lua
 luarocks
 neovim
