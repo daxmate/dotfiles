@@ -52,6 +52,7 @@ if [[ ! -d ~/.oh-my-zsh/custom/plugins/mydirhistory ]]; then
 fi
 
 ln -fs ~/dotfiles/pac.js ~/Library/Application\ Support/V2RayX/pac/pac.js
+ln -fs ~/dotfiles/karabiner.json ~/.config/karabiner/karabiner.json
 
 installed_formulae=(`brew list --formulae`)
 installed_casks=(`brew list --casks`)
