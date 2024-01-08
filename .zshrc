@@ -92,20 +92,25 @@ ZSH_CUSTOM=~/dotfiles/ohmyzsh/custom
 plugins=(
 aliases
 dirhistory
+enhancd
 git
 gitignore
-macos
 history
-timer
+macos
 ripgrep
 sudo
+timer
 zoxide
-zsh-interactive-cd
+zsh-autopair
+zsh-autosuggestions
+zsh-completions
 zsh-eza
+zsh-syntax-highlighting
+zsh-you-should-use
 )
 
 # add zsh-completions function folder to the FPATH
-FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+FPATH=$ZSH_CUSTOM/plugins/zsh-completions/src:$FPATH
 FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
 source $ZSH/oh-my-zsh.sh
 
@@ -208,17 +213,14 @@ alias unproxy='unset all_proxy'
 
 export NNN_PLUG='f:finder;o:fzopen;p:mocq;d:diffs;t:nmount;v:imgview'
 export ZPLUG_HOME=/opt/homebrew/opt/zplug
+export ENHANCD_FILTER="fzf --preview 'eza -al --tree --level 1 --group-directories-first --git-ignore
+        --header --git --no-user --no-time --no-filesize --no-permissions {}' --preview-window right,50% --height 35% --reverse --ansi"
 
 
 figlet "HELLO DAX" | lolcat
 bindkey "ç" fzf-cd-widget
 # # settings for thefuck
 eval $(thefuck --alias)
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $(brew --prefix)/share/zsh-you-should-use/you-should-use.plugin.zsh
-source $(brew --prefix)/share/zsh-autopair/autopair.zsh
-source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/.oh-my-zsh/plugins/zsh-interactive-cd/zsh-interactive-cd.plugin.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-source ~/.oh-my-zsh/plugins/zsh-interactive-cd/zsh-interactive-cd.plugin.zsh
 autopair-init
+source /opt/homebrew/share/antigen/antigen.zsh

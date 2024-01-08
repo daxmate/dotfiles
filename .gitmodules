@@ -1,3 +1,21 @@
 [submodule "ohmyzsh/custom/plugins/zsh-eza"]
 	path = ohmyzsh/custom/plugins/zsh-eza
 	url = https://github.com/z-shell/zsh-eza
+[submodule "ohmyzsh/custom/plugins/zsh-autosuggestions"]
+	path = ohmyzsh/custom/plugins/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions
+[submodule "ohmyzsh/custom/plugins/zsh-syntax-highlighting"]
+	path = ohmyzsh/custom/plugins/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting
+[submodule "ohmyzsh/custom/plugins/zsh-completions"]
+	path = ohmyzsh/custom/plugins/zsh-completions
+	url = https://github.com/zsh-users/zsh-completions
+[submodule "ohmyzsh/custom/plugins/zsh-autopair"]
+	path = ohmyzsh/custom/plugins/zsh-autopair
+	url = https://github.com/hlissner/zsh-autopair
+[submodule "ohmyzsh/custom/plugins/zsh-you-should-use"]
+	path = ohmyzsh/custom/plugins/zsh-you-should-use
+	url = https://github.com/MichaelAquilina/zsh-you-should-use
+[submodule "ohmyzsh/custom/plugins/enhancd"]
+	path = ohmyzsh/custom/plugins/enhancd
+	url = https://github.com/babarot/enhancd
