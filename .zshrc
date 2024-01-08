@@ -109,6 +109,8 @@ zsh-syntax-highlighting
 zsh-you-should-use
 )
 
+autoload bashcompinit && bashcompinit
+[[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
 # add zsh-completions function folder to the FPATH
 FPATH=$ZSH_CUSTOM/plugins/zsh-completions/src:$FPATH
 FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
