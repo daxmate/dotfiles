@@ -91,6 +91,7 @@ ZSH_CUSTOM=~/dotfiles/ohmyzsh/custom
 
 plugins=(
 aliases
+alehouse
 dirhistory
 enhancd
 git
