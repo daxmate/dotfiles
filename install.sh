@@ -92,7 +92,6 @@ neovim
 python
 ripgrep
 thefuck
-tree
 yt-dlp
 zoxide
 zsh-autopair
