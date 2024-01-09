@@ -123,6 +123,7 @@ rectangle
 sioyek
 squirrel
 tex-live-utility
+the-unarchiver
 wechat
 wpsoffice-cn
 )
