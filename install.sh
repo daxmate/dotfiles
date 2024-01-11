@@ -76,7 +76,7 @@ function install(){
 
 # formulae
 formulae=(
-autojump
+bat
 eza
 fd
 ffmpeg
