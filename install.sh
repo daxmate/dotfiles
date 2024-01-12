@@ -120,6 +120,7 @@ mpv
 obs
 pycharm-ce
 qbittorrent
+qq
 rectangle
 sioyek
 squirrel
