@@ -59,8 +59,9 @@ vnoremap <c-j> :m '>+1<CR>gv=gv
 vnoremap <c-k> :m '<-2<CR>gv=gv
 inoremap <c-j> <Esc>:m .+1<CR>==gi
 inoremap <c-k> <Esc>:m .-2<CR>==gi
-inoremap <leader>c <c-r>"
-inoremap <leader>* <c-r>*
+inoremap <leader>r0 <c-r>0
+inoremap <leader>rc <c-r>"
+inoremap <leader>r* <c-r>*
 
 " windows
 nnoremap <leader>wh <c-w>h
