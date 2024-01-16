@@ -163,8 +163,8 @@ alias vi=nvim
 alias buildnhk=~/dotfiles/buildnhk.sh
 alias dsq='ssh dax@192.168.31.24 -t "export PATH=/opt/bin:/opt/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin && /opt/bin/zsh -l"'
 alias lwarp="lwarpmk print && lwarpmk html && lwarpmk limages"
-# export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
-# export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
 # export CXX="/opt/homebrew/Cellar/llvm/16.0.0/bin/clang++"
 export CXX="/opt/homebrew/bin/g++-13"
 export CC="/opt/homebrew/bin/gcc-13"
