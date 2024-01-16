@@ -17,7 +17,7 @@ endfunction
 function! neoformat#formatters#cpp#astyle() abort
     return {
            \ 'exe': 'astyle',
-           \ 'args': ['--style=allman', '--indent=tab=4', '--pad-comma', '--pad-oper', '--unpad-paren', '--break-blocks', '--delete-empty-lines', '--align-method-colon', '--max-code-length=120', '--break-after-logical'],
+           \ 'args': ['--style=allman', '--indent=tab=4', '--pad-comma', '--pad-oper', '--unpad-paren', '--break-blocks', '--squeeze-lines=1', '--align-method-colon', '--max-code-length=120', '--break-after-logical', '--indent-classes'],
            \ 'stdin': 1,
            \ }
 endfunction
