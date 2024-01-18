@@ -89,10 +89,12 @@ lolcat
 lua
 luarocks
 neovim
+nnn
 python
 ripgrep
 thefuck
 tldr
+vifm
 yt-dlp
 zoxide
 zsh-autopair
