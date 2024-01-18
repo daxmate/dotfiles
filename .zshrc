@@ -175,6 +175,7 @@ export LC_ALL=zh_CN.UTF-8
 alias ez="vim ~/.zshrc"
 alias sz="source ~/.zshrc"
 alias ls=eza
+alias bat="bat --theme 'Monokai Extended Light'"
 if alias run-help >/dev/null 2>&1; then
 	unalias run-help
 fi
