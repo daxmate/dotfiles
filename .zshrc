@@ -198,7 +198,7 @@ function zle-line-init zle-keymap-select {
 	fi
   RPS2=${RPS1}
 	if [[ ${KEYMAP} == vicmd ]] || [[ $1 = 'block' ]]; then
-    echo -ne '\e[1 q'
+    echo -ne '\e[2 q'
   elif [[ ${KEYMAP} == main ]] || [[ ${KEYMAP} == viins ]] || [[ ${KEYMAP} = '' ]] || [[ $1 = 'beam' ]]; then
     echo -ne '\e[5 q'
   fi
