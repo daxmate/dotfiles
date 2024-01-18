@@ -16,9 +16,6 @@
 [submodule "ohmyzsh/custom/plugins/zsh-you-should-use"]
 	path = ohmyzsh/custom/plugins/zsh-you-should-use
 	url = https://github.com/MichaelAquilina/zsh-you-should-use
-[submodule "ohmyzsh/custom/plugins/enhancd"]
-	path = ohmyzsh/custom/plugins/enhancd
-	url = https://github.com/babarot/enhancd
 [submodule "ohmyzsh/custom/plugins/alehouse"]
 	path = ohmyzsh/custom/plugins/alehouse
 	url = https://github.com/sticklerm3/alehouse

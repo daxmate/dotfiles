@@ -93,7 +93,6 @@ plugins=(
 aliases
 alehouse
 dirhistory
-enhancd
 git
 gitignore
 history
