@@ -92,7 +92,6 @@ ZSH_CUSTOM=~/dotfiles/ohmyzsh/custom
 plugins=(
 aliases
 alehouse
-dirhistory
 git
 gitignore
 history
