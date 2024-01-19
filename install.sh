@@ -109,7 +109,6 @@ casks=(
 alt-tab
 anki
 calibre
-flameshot
 google-chrome
 iina
 karabiner-elements
