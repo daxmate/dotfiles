@@ -54,6 +54,10 @@ fi
 ln -fs ~/dotfiles/pac.js ~/Library/Application\ Support/V2RayX/pac/pac.js
 ln -fs ~/dotfiles/karabiner.json ~/.config/karabiner/karabiner.json
 
+ln -fs ~/dotfiles/tex.vim ~/.local/share/nvim/site/pack/packer/start/neoformat/autoload/neoformat/formatters/tex.vim
+ln -fs ~/dotfiles/.mylatexindent.yaml ~/.mylatexindent.yaml
+ln -fs ~/dotfiles/.indentconfig.yaml ~/.indentconfig.yaml
+
 installed_formulae=(`brew list --formulae`)
 installed_casks=(`brew list --casks`)
 function install(){
