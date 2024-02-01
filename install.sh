@@ -65,14 +65,16 @@ function install(){
 	if [[ "$1" == formula ]]; then
 		if [[ ${installed_formulae[(Ie)$cmd]} == 0 ]]; then
 			brew install $cmd
+		else if [[ ${installed_formulae[(I)python]} ]]; then
+			echo "Python already installed, skip"
 		else
-			echo "$cmd already existed"
+			echo "$cmd already installed, skip"
 		fi
 	else
 		if [[ ${installed_casks[(Ie)$cmd]} == 0 ]]; then
 			brew install --cask --force $cmd
 		else
-			echo "$cmd already existed"
+			echo "$cmd already installed, skip"
 		fi
 	fi
 }
