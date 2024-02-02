@@ -52,8 +52,8 @@ HYPHEN_INSENSITIVE="true"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
-zstyle ':completion:*' completer _expand  _complete _correct
+# ENABLE_CORRECTION="true"
+# zstyle ':completion:*' completer _expand  _complete _correct
 
 zstyle ':completion:*' menu select
 zmodload zsh/complist
