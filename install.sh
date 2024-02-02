@@ -63,18 +63,18 @@ installed_casks=(`brew list --casks`)
 function install(){
 	cmd=$2
 	if [[ "$1" == formula ]]; then
-		if [[ ${installed_formulae[(Ie)$cmd]} == 0 ]]; then
-			brew install $cmd
-		else if [[ ${installed_formulae[(I)python]} ]]; then
+		if [[ $cmd == "python" ]] && [[ ${installed_formulae[(I)$cmd]} ]]; then
 			echo "Python already installed, skip"
-		else
+		elif [[ ${installed_formulae[(Ie)$cmd]} ]]; then
 			echo "$cmd already installed, skip"
+		else
+			brew install "$cmd"
 		fi
 	else
-		if [[ ${installed_casks[(Ie)$cmd]} == 0 ]]; then
-			brew install --cask --force $cmd
-		else
+		if [[ ${installed_casks[(Ie)$cmd]} ]]; then
 			echo "$cmd already installed, skip"
+		else
+			brew install --cask --force $cmd
 		fi
 	fi
 }
