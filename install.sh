@@ -58,6 +58,10 @@ ln -fs ~/dotfiles/tex.vim ~/.local/share/nvim/site/pack/packer/start/neoformat/a
 ln -fs ~/dotfiles/.mylatexindent.yaml ~/.mylatexindent.yaml
 ln -fs ~/dotfiles/.indentconfig.yaml ~/.indentconfig.yaml
 
+#sioyek
+ln -fs ~/dotfiles/sioyek/keys_user.config ~/Library/Application\ Support/sioyek/keys_user.config
+ln -fs ~/dotfiles/sioyek/prefs_user.config ~/Library/Application\ Support/sioyek/prefs_user.config
+
 installed_formulae=(`brew list --formulae`)
 installed_casks=(`brew list --casks`)
 function install(){
