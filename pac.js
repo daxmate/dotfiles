@@ -198,6 +198,7 @@ var domains = [
 
 	//dax
 	"bitbucket.io",
+	"perplexity.ai",
 	"suno.ai",
 	"torrentmac.net",
 	"ptchdbits.co",
