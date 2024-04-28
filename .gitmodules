@@ -19,3 +19,6 @@
 [submodule "ohmyzsh/custom/plugins/alehouse"]
 	path = ohmyzsh/custom/plugins/alehouse
 	url = https://github.com/sticklerm3/alehouse
+[submodule "ohmyzsh/custom/plugins/forgit"]
+	path = ohmyzsh/custom/plugins/forgit
+	url = https://github.com/wfxr/forgit
