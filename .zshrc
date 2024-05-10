@@ -93,6 +93,7 @@ ZSH_CUSTOM=~/dotfiles/ohmyzsh/custom
 
 plugins=(
 aliases
+dax
 forgit
 git
 gitignore
