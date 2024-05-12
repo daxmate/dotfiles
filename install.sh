@@ -91,6 +91,7 @@ eza
 fd
 ffmpeg
 figlet
+fortune
 fzf
 gcc
 git
