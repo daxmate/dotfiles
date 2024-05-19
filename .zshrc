@@ -224,6 +224,7 @@ export ENHANCD_FILTER="fzf --preview 'eza -al --tree --level 1 --group-directori
 
 
 figlet "HELLO DAX" | lolcat
+fortune | lolcat
 bindkey "ç" fzf-cd-widget
 # # settings for thefuck
 eval $(thefuck --alias)
