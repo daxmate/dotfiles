@@ -230,6 +230,7 @@ var domains = [
 	"googleusercontent.com",
 	"gutenberg.org",
 	"haba.co.jp",
+	"huggingface.co",
 	"healthline.com",
 	"heroku.com",
 	"hinoki-project.org",
