@@ -174,9 +174,6 @@ alias pyin='pip install'
 alias brin='brew install'
 alias ytd='yt-dlp -N 5'
 export LC_ALL=zh_CN.UTF-8
-alias ez="vim ~/.zshrc"
-alias sz="source ~/.zshrc"
-alias eu="nvim ~/Library/Rime/wubi86_user.dict.yaml"
 alias ls=eza
 alias bat="bat --theme 'Monokai Extended Light'"
 if alias run-help >/dev/null 2>&1; then
