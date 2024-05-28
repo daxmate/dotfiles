@@ -1,6 +1,8 @@
+removeTrailingWhitespace: 1
 indentRules:
   tabular: "\t"
 lookForAlignDelims:
+  table: 1
   tabular: 1
   tabularx: 1
   longtable: 1
