@@ -155,7 +155,7 @@ export PYTHONPATH=/opt/homebrew/bin//python3
 
 alias pip=pip3
 alias ui2py="python3 ui2py.py"
-alias git='LANG=en_US.UTF-8 git'
+export LANGUAGE='en_US.UTF-8 git'
 alias subrename="python3 ~/dotfiles/subrename.py"
 alias py=python3
 alias python=python3
