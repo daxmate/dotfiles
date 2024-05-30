@@ -171,7 +171,6 @@ export CXX="/opt/homebrew/bin/g++-14"
 export CC="/opt/homebrew/bin/gcc-14"
 alias rnm='python3 ~/dotfiles/myrename.py'
 alias pyin='pip install'
-alias brin='brew install'
 alias ytd='yt-dlp -N 5'
 export LC_ALL=zh_CN.UTF-8
 alias ls=eza
