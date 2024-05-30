@@ -22,3 +22,6 @@
 [submodule "ohmyzsh/custom/plugins/forgit"]
 	path = ohmyzsh/custom/plugins/forgit
 	url = https://github.com/wfxr/forgit
+[submodule "ohmyzsh/custom/plugins/emoji-cli"]
+	path = ohmyzsh/custom/plugins/emoji-cli
+	url = https://github.com/wfxr/emoji-cli/
