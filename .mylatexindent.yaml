@@ -3,7 +3,8 @@ indentRules:
   tabular: "\t"
 lookForAlignDelims:
   table: 1
-  tabular: 1
+  tabular:
+    delimiterRegEx: (?<!\\)(&)(?![^{}]*\})
   tabularx: 1
   longtable: 1
   array: 1
