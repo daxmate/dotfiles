@@ -219,7 +219,7 @@ export ENHANCD_FILTER="fzf --preview 'eza -al --tree --level 1 --group-directori
         --header --git --no-user --no-time --no-filesize --no-permissions {}' --preview-window right,50% --height 35% --reverse --ansi"
 
 
-figlet "HELLO DAX" | lolcat
+figlet -f big "HELLO DAX" | lolcat
 fortune | lolcat
 bindkey "ç" fzf-cd-widget
 # # settings for thefuck
