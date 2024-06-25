@@ -95,6 +95,7 @@ plugins=(
 aliases
 dax
 forgit
+gh
 git
 gitignore
 history
