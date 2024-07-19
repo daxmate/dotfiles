@@ -25,3 +25,7 @@
 [submodule "ohmyzsh/custom/plugins/emoji-cli"]
 	path = ohmyzsh/custom/plugins/emoji-cli
 	url = https://github.com/wfxr/emoji-cli/
+[submodule "ohmyzsh/custom/plugins/fzf-tab"]
+	path = ohmyzsh/custom/plugins/fzf-tab
+	url = https://github.com/Aloxaf/fzf-tab
+
