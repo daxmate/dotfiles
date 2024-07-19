@@ -201,6 +201,8 @@ var domains = [
 	"amazon.co.jp",
 	"ankiweb.net",
 	"ankiweb.net",
+	"chatgpt.com",
+	"perplexity.ai",
 	"ankiweb.net",
 	"anthropic.com",
 	"assrt.net",
