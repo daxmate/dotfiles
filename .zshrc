@@ -232,3 +232,5 @@ autopair-init
 ___MY_VMOPTIONS_SHELL_FILE="${HOME}/.jetbrains.vmoptions.sh"; if [ -f "${___MY_VMOPTIONS_SHELL_FILE}" ]; then . "${___MY_VMOPTIONS_SHELL_FILE}"; fi
 
 source ~/dotfiles/ohmyzsh/custom/plugins/forgit/forgit.plugin.zsh
+autoload -U compinit; compinit
+source ~/dotfiles/ohmyzsh/custom/plugins/fzf-tab/fzf-tab.plugin.zsh
