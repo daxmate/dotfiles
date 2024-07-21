@@ -9,3 +9,6 @@ lookForAlignDelims:
   longtable: 1
   array: 1
   matrix: 1
+
+verbatimEnvironments:
+  texlst: 1
