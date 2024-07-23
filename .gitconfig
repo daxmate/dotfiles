@@ -13,10 +13,10 @@
 	insteadof = git://
 [color]
 	ui = true
-; [https]
-; 	proxy = socks5://127.0.0.1:1081
-; [http]
-; 	proxy = http://127.0.0.1:8001
+[https]
+	proxy = socks5://127.0.0.1:1081
+[http]
+	proxy = http://127.0.0.1:8001
 [init]
 	defaultBranch = main
 [merge]
