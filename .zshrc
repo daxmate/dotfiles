@@ -82,7 +82,7 @@ bindkey -M menuselect 'j' vi-down-line-or-history
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
-ZSH_CUSTOM=~/dotfiles/ohmyzsh/custom
+# ZSH_CUSTOM=~/dotfiles/ohmyzsh/custom
 
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
@@ -231,9 +231,9 @@ autopair-init
 # Environmental variables for jetbra cracks
 ___MY_VMOPTIONS_SHELL_FILE="${HOME}/.jetbrains.vmoptions.sh"; if [ -f "${___MY_VMOPTIONS_SHELL_FILE}" ]; then . "${___MY_VMOPTIONS_SHELL_FILE}"; fi
 
-source ~/dotfiles/ohmyzsh/custom/plugins/forgit/forgit.plugin.zsh
+source ${ZSH_CUSTOM}/plugins/forgit/forgit.plugin.zsh
 autoload -U compinit; compinit
-source ~/dotfiles/ohmyzsh/custom/plugins/fzf-tab/fzf-tab.plugin.zsh
+source ${ZSH_CUSTOM}/plugins/fzf-tab/fzf-tab.plugin.zsh
 
 export FZF_DEFAULT_OPTS=" \
 --color=bg+:#414559,bg:#303446,spinner:#f2d5cf,hl:#e78284 \
