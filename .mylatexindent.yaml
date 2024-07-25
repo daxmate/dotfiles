@@ -12,3 +12,4 @@ lookForAlignDelims:
 
 verbatimEnvironments:
   texlst: 1
+  shellcmd: 1
