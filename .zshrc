@@ -100,7 +100,6 @@ git
 gitignore
 history
 macos
-ripgrep
 sudo
 timer
 zoxide
