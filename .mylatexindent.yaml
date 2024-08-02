@@ -13,3 +13,4 @@ lookForAlignDelims:
 verbatimEnvironments:
   texlst: 1
   shellcmd: 1
+  cpplst: 1
