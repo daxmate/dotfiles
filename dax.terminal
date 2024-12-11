@@ -218,7 +218,7 @@
 	<data>
 	YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMS
 	AAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGkCwwVFlUkbnVsbNQNDg8QERIT
-	FFZOU1NpemVYTlNmRmxhZ3NWTlNOYW1lViRjbGFzcyNAKgAAAAAAABAQgAKAA18QGkpl
+	FFZOU1NpemVYTlNmRmxhZ3NWTlNOYW1lViRjbGFzcyNALAAAAAAAABAQgAKAA18QGkpl
 	dEJyYWluc01vbm9OTE5GTS1SZWd1bGFy0hcYGRpaJGNsYXNzbmFtZVgkY2xhc3Nlc1ZO
 	U0ZvbnSiGRtYTlNPYmplY3QIERokKTI3SUxRU1heZ253foWOkJKUsbbBytHUAAAAAAAA
 	AQEAAAAAAAAAHAAAAAAAAAAAAAAAAAAAAN0=
@@ -238,6 +238,8 @@
 	Y3QIERokKTI3SUxRU1ddZGp3fp2foaaxusLFAAAAAAAAAQEAAAAAAAAAGQAAAAAAAAAA
 	AAAAAAAAAM4=
 	</data>
+	<key>ShouldRestoreContent</key>
+	<false/>
 	<key>TerminalType</key>
 	<string>xterm-256color</string>
 	<key>TextBoldColor</key>
@@ -272,6 +274,8 @@
 	AEwAUQBTAFoAYABrAHgAfgCLAKAApwDQAPgA+gD8AP4BBQELARUBFwEZARsDNwM8A0cD
 	UANdA2ADbQN2A3sDgwAAAAAAAAIBAAAAAAAAACgAAAAAAAAAAAAAAAAAAAOG
 	</data>
+	<key>UseBrightBold</key>
+	<true/>
 	<key>columnCount</key>
 	<integer>90</integer>
 	<key>keyMapBoundKeys</key>
@@ -390,10 +394,12 @@
 		<string>[3;5~</string>
 	</dict>
 	<key>name</key>
-	<string>Solarized Dark</string>
+	<string>dax</string>
 	<key>rowCount</key>
 	<integer>50</integer>
 	<key>type</key>
 	<string>Window Settings</string>
+	<key>useOptionAsMetaKey</key>
+	<true/>
 </dict>
 </plist>
