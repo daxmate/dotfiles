@@ -153,33 +153,12 @@ export HOMEBREW_PIP_INDEX_URL="https://pypi.tuna.tsinghua.edu.cn/simple"
 export PYTHONPATH=/opt/homebrew/bin//python3
 
 
-alias pip=pip3
-alias ui2py="python3 ui2py.py"
 export LANGUAGE='en_US.UTF-8 git'
-alias subrename="python3 ~/dotfiles/subrename.py"
-alias py=python3
-alias python=python3
-alias vim=nvim
-alias vi=nvim
-alias buildnhk=~/dotfiles/buildnhk.sh
-alias dsq='ssh dax@192.168.31.24 -t "export PATH=/opt/bin:/opt/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin && /opt/bin/zsh -l"'
-alias lwarp="lwarpmk print && lwarpmk html && lwarpmk limages"
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
 # export CXX="/opt/homebrew/Cellar/llvm/16.0.0/bin/clang++"
 export CXX="/opt/homebrew/bin/g++-14"
 export CC="/opt/homebrew/bin/gcc-14"
-alias rnm='python3 ~/dotfiles/myrename.py'
-alias pyin='pip install'
-alias ytd='yt-dlp -N 5'
-export LC_ALL=zh_CN.UTF-8
-alias ls=eza
-alias bat="bat --theme 'Monokai Extended Light'"
-if alias run-help >/dev/null 2>&1; then
-	unalias run-help
-fi
-autoload run-help
-alias help=run-help
 
 
 # vim setup
