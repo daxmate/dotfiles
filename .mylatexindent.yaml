@@ -14,3 +14,15 @@ verbatimEnvironments:
   texlst: 1
   shellcmd: 1
   cpplst: 1
+
+indentAfterItems:
+  enumerate: 1
+  parts: 1
+  equation: 1
+  cenum: 1
+  mathenum: 1
+  penum: 1
+
+itemNames:
+  item: 1
+  part: 1
