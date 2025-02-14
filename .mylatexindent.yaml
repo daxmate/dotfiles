@@ -1,3 +1,4 @@
+indentPreamble: 1
 removeTrailingWhitespace: 1
 indentRules:
   tabular: "\t"
