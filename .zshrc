@@ -156,10 +156,10 @@ export PYTHONPATH=/opt/homebrew/bin//python3
 export LANGUAGE='en_US.UTF-8 git'
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
-export CXX="/opt/homebrew/opt/llvm/bin/clang++"
-export CC="/opt/homebrew/opt/llvm/bin/clang"
-# export CXX="/opt/homebrew/bin/g++-14"
-# export CC="/opt/homebrew/bin/gcc-14"
+# export CXX="/opt/homebrew/opt/llvm/bin/clang++"
+# export CC="/opt/homebrew/opt/llvm/bin/clang"
+export CXX="/opt/homebrew/bin/g++-15"
+export CC="/opt/homebrew/bin/gcc-15"
 
 
 # vim setup
