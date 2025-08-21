@@ -192,12 +192,6 @@ if [ -f "${___MY_VMOPTIONS_SHELL_FILE}" ]; then . "${___MY_VMOPTIONS_SHELL_FILE}
 autoload -U compinit
 compinit
 
-export FZF_DEFAULT_OPTS='
---color=bg:237,fg:255,hl:red,marker:cyan,prompt:magenta
---reverse 
---border=rounded
-'
-
 # install zinit
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 [ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
@@ -218,3 +212,10 @@ zinit light wfxr/forgit
 zinit light z-shell/zsh-zoxide
 eval "$(zoxide init zsh --cmd j)"
 zinit light Aloxaf/fzf-tab
+
+export FZF_DEFAULT_OPTS='
+--color=bg:237,fg:255,hl:red,marker:cyan,prompt:magenta
+--reverse 
+--border=rounded
+--bind "tab:down,shift-tab:up"
+'
