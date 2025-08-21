@@ -213,11 +213,12 @@ source ${ZSH_CUSTOM}/plugins/forgit/forgit.plugin.zsh
 autoload -U compinit; compinit
 source ${ZSH_CUSTOM}/plugins/fzf-tab/fzf-tab.plugin.zsh
 
-
-export FZF_DEFAULT_OPTS=" \
- --color=bg:#000000,fg:#abb2bf,hl:#d18f52\
- --color=bg+:#4f5666,fg+:#abb2bf,hl+:#f0a45d\
- --color=info:#4dc4ff,border:#4aa5f0,prompt:#8cc265\
- --color=pointer:#000000,marker:#ff616e,spinner:#ff616e,header:#e05561,\
- --border='rounded' --border-label='' --preview-window='border-rounded' --prompt='> ' \
-  --marker='>' --pointer='◆' --separator='─' --scrollbar='│'"
+# export FZF_DEFAULT_OPTS=" \
+# --color=bg+:#414559,bg:#303446,spinner:#f2d5cf,hl:#e78284 \
+# --color=fg:#c6d0f5,header:#e78284,info:#ca9ee6,pointer:#f2d5cf \
+# --color=marker:#f2d5cf,fg+:#c6d0f5,prompt:#ca9ee6,hl+:#e78284"
+export FZF_DEFAULT_OPTS='
+--color=bg:237,fg:255,hl:red,marker:cyan,prompt:magenta
+--reverse 
+--border=rounded
+'
