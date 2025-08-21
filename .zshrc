@@ -12,7 +12,6 @@ export PATH="/opt/homebrew/sbin:$PATH"
 export CPLUS_INCLUDE_PATH=/usr/local/include
 export LIBRARY_PATH=/usr/local/lib
 
-
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
@@ -153,14 +152,12 @@ export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebr
 export HOMEBREW_PIP_INDEX_URL="https://pypi.tuna.tsinghua.edu.cn/simple"
 export PYTHONPATH=/opt/homebrew/bin//python3
 
-
 export LANGUAGE='en_US.UTF-8 git'
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
 # export CXX="/opt/homebrew/Cellar/llvm/16.0.0/bin/clang++"
 export CXX="/opt/homebrew/bin/g++-15"
 export CC="/opt/homebrew/bin/gcc-15"
-
 
 # vim setup
 export FCEDIT=nvim
@@ -192,26 +189,18 @@ zle -N zle-keymap-select
 alias proxy='export all_proxy=socks5://127.0.0.1:1081'
 alias unproxy='unset all_proxy'
 
-
-export NNN_PLUG='f:finder;o:fzopen;p:mocq;d:diffs;t:nmount;v:imgview'
-export ZPLUG_HOME=/opt/homebrew/opt/zplug
-
 export TLDR_AUTO_UPDATE_DISABLED="true"
 
 figlet -f big "HELLO DAX" | lolcat
 fortune | lolcat
 bindkey "ç" fzf-cd-widget
-# # settings for thefuck
-eval $(thefuck --alias)
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-autopair-init
 
 # Environmental variables for jetbra cracks
 ___MY_VMOPTIONS_SHELL_FILE="${HOME}/.jetbrains.vmoptions.sh"; if [ -f "${___MY_VMOPTIONS_SHELL_FILE}" ]; then . "${___MY_VMOPTIONS_SHELL_FILE}"; fi
 
-source ${ZSH_CUSTOM}/plugins/forgit/forgit.plugin.zsh
-autoload -U compinit; compinit
-source ${ZSH_CUSTOM}/plugins/fzf-tab/fzf-tab.plugin.zsh
+autoload -U compinit
+compinit
 
 # export FZF_DEFAULT_OPTS=" \
 # --color=bg+:#414559,bg:#303446,spinner:#f2d5cf,hl:#e78284 \
