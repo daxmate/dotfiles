@@ -90,25 +90,16 @@ bindkey -M menuselect 'j' vi-down-line-or-history
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 
-
 plugins=(
-aliases
-dax
-forgit
-gh
-git
-gitignore
-history
-macos
-sudo
-timer
-zoxide
-zsh-autopair
-zsh-autosuggestions
-zsh-completions
-zsh-eza
-zsh-syntax-highlighting
-zsh-you-should-use
+  aliases
+  dax
+  gh
+  git
+  gitignore
+  history
+  macos
+  sudo
+  timer
 )
 
 autoload bashcompinit && bashcompinit
@@ -211,3 +202,24 @@ export FZF_DEFAULT_OPTS='
 --reverse 
 --border=rounded
 '
+
+# install zinit
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+[ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
+[ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+source "${ZINIT_HOME}/zinit.zsh"
+
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
+
+# # load plugins
+zinit light z-shell/zsh-eza
+zinit light hlissner/zsh-autopair
+zinit light zsh-users/zsh-autosuggestions
+zinit light zsh-users/zsh-completions
+zinit light zsh-users/zsh-syntax-highlighting
+zinit light MichaelAquilina/zsh-you-should-use
+zinit light wfxr/forgit
+zinit light z-shell/zsh-zoxide
+eval "$(zoxide init zsh --cmd j)"
+zinit light Aloxaf/fzf-tab
