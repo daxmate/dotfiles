@@ -199,7 +199,7 @@ ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 source "${ZINIT_HOME}/zinit.zsh"
 
 autoload -Uz _zinit
-(( ${+_comps} )) && _comps[zinit]=_zinit
+[[ -v _comps ]] && _comps[zinit]=_zinit
 
 # # load plugins
 zinit light z-shell/zsh-eza
