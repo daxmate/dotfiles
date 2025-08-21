@@ -158,20 +158,19 @@ bindkey -M viins jk vi-cmd-mode
 bindkey -M vicmd vv edit-command-line
 
 function zle-line-init zle-keymap-select {
-	if [[ ${KEYMAP} == vicmd ]]; then
-		RPS1="%{%K{204}%}%F{white}%B NORMAL %b%f%k%"
-	else
-		RPS1="%{%K{204}%}%F{white}%B INSERT %b%f%k%"
-	fi
-  RPS2=${RPS1}
-	if [[ ${KEYMAP} == vicmd ]] || [[ $1 = 'block' ]]; then
-    echo -ne '\e[2 q'
-  elif [[ ${KEYMAP} == main ]] || [[ ${KEYMAP} == viins ]] || [[ ${KEYMAP} = '' ]] || [[ $1 = 'beam' ]]; then
-    echo -ne '\e[5 q'
-  fi
+if [[ ${KEYMAP} == vicmd ]]; then
+  RPS1="%{%K{204}%}%F{white}%B NORMAL %b%f%k%"
+else
+  RPS1="%{%K{204}%}%F{white}%B INSERT %b%f%k%"
+fi
+RPS2=${RPS1}
+if [[ ${KEYMAP} == vicmd ]] || [[ $1 = 'block' ]]; then
+  echo -ne '\e[2 q'
+elif [[ ${KEYMAP} == main ]] || [[ ${KEYMAP} == viins ]] || [[ ${KEYMAP} = '' ]] || [[ $1 = 'beam' ]]; then
+  echo -ne '\e[5 q'
+fi
 
-  zle reset-prompt
-}
+zle reset-prompt }
 
 zle -N zle-line-init
 zle -N zle-keymap-select
@@ -188,7 +187,8 @@ bindkey "ç" fzf-cd-widget
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Environmental variables for jetbra cracks
-___MY_VMOPTIONS_SHELL_FILE="${HOME}/.jetbrains.vmoptions.sh"; if [ -f "${___MY_VMOPTIONS_SHELL_FILE}" ]; then . "${___MY_VMOPTIONS_SHELL_FILE}"; fi
+___MY_VMOPTIONS_SHELL_FILE="${HOME}/.jetbrains.vmoptions.sh"
+if [ -f "${___MY_VMOPTIONS_SHELL_FILE}" ]; then . "${___MY_VMOPTIONS_SHELL_FILE}"; fi
 
 autoload -U compinit
 compinit
