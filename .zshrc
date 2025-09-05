@@ -91,15 +91,15 @@ bindkey -M menuselect 'j' vi-down-line-or-history
 # Add wisely, as too many plugins slow down shell startup.
 
 plugins=(
-    aliases
-    dax
-    gh
-    git
-    gitignore
-    history
-    macos
-    sudo
-    timer
+	aliases
+	dax
+	gh
+	git
+	gitignore
+	history
+	macos
+	sudo
+	timer
 )
 
 autoload bashcompinit && bashcompinit
@@ -158,17 +158,17 @@ bindkey -M viins jk vi-cmd-mode
 bindkey -M vicmd vv edit-command-line
 
 function zle-line-init zle-keymap-select {
-    if [[ ${KEYMAP} == vicmd ]]; then
-        RPS1="%{%K{204}%}%F{white}%B NORMAL %b%f%k%"
-    else
-        RPS1="%{%K{204}%}%F{white}%B INSERT %b%f%k%"
-    fi
-    RPS2=${RPS1}
-    if [[ ${KEYMAP} == vicmd ]] || [[ $1 = 'block' ]]; then
-        echo -ne '\e[2 q'
-    elif [[ ${KEYMAP} == main ]] || [[ ${KEYMAP} == viins ]] || [[ ${KEYMAP} = '' ]] || [[ $1 = 'beam' ]]; then
-        echo -ne '\e[5 q'
-    fi
+if [[ ${KEYMAP} == vicmd ]]; then
+	RPS1="%{%K{204}%}%F{white}%B NORMAL %b%f%k%"
+else
+	RPS1="%{%K{204}%}%F{white}%B INSERT %b%f%k%"
+fi
+RPS2=${RPS1}
+if [[ ${KEYMAP} == vicmd ]] || [[ $1 = 'block' ]]; then
+	echo -ne '\e[2 q'
+elif [[ ${KEYMAP} == main ]] || [[ ${KEYMAP} == viins ]] || [[ ${KEYMAP} = '' ]] || [[ $1 = 'beam' ]]; then
+	echo -ne '\e[5 q'
+fi
 
 zle reset-prompt }
 
