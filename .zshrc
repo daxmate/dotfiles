@@ -220,4 +220,4 @@ export FZF_DEFAULT_OPTS='
 --bind "tab:down,shift-tab:up"
 '
 # load deepseek_api_key
-source ~/dotfiles/deepseek_api_key
+source ~/dotfiles/ai_api_keys
