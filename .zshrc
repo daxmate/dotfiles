@@ -217,7 +217,8 @@ export FZF_DEFAULT_OPTS='
 --color=bg:237,fg:255,hl:red,marker:cyan,prompt:magenta
 --reverse
 --border=rounded
---bind "tab:down,shift-tab:up"
+--multi
+--bind "tab:toggle+down,shift-tab:up"
 '
 # load deepseek_api_key
 source ~/dotfiles/ai_api_keys
