@@ -178,6 +178,7 @@ zle -N zle-keymap-select
 # proxy list
 alias proxy='export all_proxy=socks5://127.0.0.1:1081'
 alias unproxy='unset all_proxy'
+alias -g NUL="> /dev/null 2>&1"
 
 export TLDR_AUTO_UPDATE_DISABLED="true"
 
