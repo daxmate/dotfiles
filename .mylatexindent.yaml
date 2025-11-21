@@ -37,3 +37,6 @@ specialBeginEnd:
 lookForAlignDelims:
   path:
     delimiterRegEx: '(edge|node\h*\{[0-9,A-Z]+\})' 
+
+modifyLineBreaks:
+  condenseMultipleBlankLinesInto: 1
