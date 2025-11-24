@@ -8,6 +8,7 @@ export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 
 export PATH="/opt/homebrew/sbin:$PATH"
+export PATH="/opt/homebrew/opt/python@3.11/libexec/bin:$PATH"
 
 export CPLUS_INCLUDE_PATH=/usr/local/include
 export LIBRARY_PATH=/usr/local/lib
@@ -141,7 +142,7 @@ export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bot
 export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git"
 export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git"
 export HOMEBREW_PIP_INDEX_URL="https://pypi.tuna.tsinghua.edu.cn/simple"
-export PYTHONPATH=/opt/homebrew/bin//python3
+export PYTHONPATH=/opt/homebrew/opt/python@3.13/bin/python3.13
 
 export LANGUAGE='en_US.UTF-8 git'
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
