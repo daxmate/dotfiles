@@ -142,7 +142,8 @@ export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bot
 export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git"
 export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git"
 export HOMEBREW_PIP_INDEX_URL="https://pypi.tuna.tsinghua.edu.cn/simple"
-export PYTHONPATH=/opt/homebrew/opt/python@3.13/bin/python3.13
+export PYTHONPATH=/opt/homebrew/bin//python3
+export UV_INDEX_URL="https://pypi.tuna.tsinghua.edu.cn/simple/ https://pypi.org/simple/"
 
 export LANGUAGE='en_US.UTF-8 git'
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
