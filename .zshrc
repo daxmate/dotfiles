@@ -178,7 +178,7 @@ zle -N zle-line-init
 zle -N zle-keymap-select
 
 # proxy list
-# alias proxy='export all_proxy=http://127.0.0.1:1081'
+alias proxy='export all_proxy=http://127.0.0.1:1081'
 alias unproxy='unset all_proxy'
 alias -g NUL="> /dev/null 2>&1"
 

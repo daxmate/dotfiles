@@ -12,9 +12,13 @@ lookForAlignDelims:
   matrix: 1
 
 verbatimEnvironments:
-  texlst: 1
-  shellcmd: 1
-  cpplst: 1
+  nameAsRegex:
+    name: '\w+code*?'
+    lookForThis: 1
+
+verbatimCommands:
+  nameAsRegex: '\w+inline'
+  lookForThis: 1
 
 indentAfterItems:
   enumerate: 1
