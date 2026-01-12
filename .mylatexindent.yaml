@@ -44,3 +44,9 @@ lookForAlignDelims:
 
 modifyLineBreaks:
   condenseMultipleBlankLinesInto: 1
+
+replacements:
+ - substitution: s/(\{.+)(\\\\)(.+?)(\s*&|\s*\})/\1@@\3\4/gx
+   when: before 
+ - substitution: s/@@/\\\\/gx
+   when: after
