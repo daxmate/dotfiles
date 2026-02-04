@@ -37,8 +37,6 @@ links=(
     "skip" "$HOME/dotfiles/.zshrc" "$HOME/.zshrc"
     "skip" "$HOME/dotfiles/.gitconfig" "$HOME/.gitconfig"
     "skip" "$HOME/dotfiles/.latexmkrc" "$HOME/.latexmkrc"
-    # oh-my-zsh 主题和插件
-    "skip" "$HOME/dotfiles/agnoster-customized.zsh-theme" "$HOME/.oh-my-zsh/custom/themes/agnoster-customized.zsh-theme"
     # 强制覆盖的链接
     "force" "$HOME/dotfiles/.mylatexindent.yaml" "$HOME/.mylatexindent.yaml"
     "force" "$HOME/dotfiles/.indentconfig.yaml" "$HOME/.indentconfig.yaml"
