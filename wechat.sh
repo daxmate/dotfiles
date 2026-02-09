@@ -13,7 +13,7 @@ RED='\033[0;31m'; GREEN='\033[0;32m'; YELLOW='\033[1;33m'; BLUE='\033[0;34m'; NC
 # 默认路径
 WECHAT_APP="/Applications/WeChat.app"
 DEST_DIR="/Applications"
-BASE_APP_NAME="小绿书"
+BASE_APP_NAME="巨信"
 FORCE=0
 
 require_cmd() {
