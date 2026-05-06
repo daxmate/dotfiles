@@ -36,3 +36,5 @@
 	looutputencoding = utf-8
 [pull]
 	rebase = true
+[safe]
+	directory = *

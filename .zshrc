@@ -224,6 +224,7 @@ zinit light wfxr/forgit
 zinit light z-shell/zsh-zoxide
 eval "$(zoxide init zsh --cmd j)"
 zinit light Aloxaf/fzf-tab
+zinit light daxmate/openclaw-zsh-plugin
 
 export FZF_DEFAULT_OPTS='
 --color=bg:237,fg:255,hl:red,marker:cyan,prompt:magenta
@@ -234,3 +235,18 @@ export FZF_DEFAULT_OPTS='
 '
 # load deepseek_api_key
 source ~/dotfiles/ai_api_keys
+
+# OpenClaw Completion
+source "/Users/dax/.openclaw/completions/openclaw.zsh"
+
+# pnpm
+export PNPM_HOME="/Users/dax/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
