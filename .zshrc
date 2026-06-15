@@ -188,6 +188,7 @@ zle -N zle-keymap-select
 alias proxy='export all_proxy=http://127.0.0.1:1081'
 alias unproxy='unset all_proxy'
 alias -g NUL="> /dev/null 2>&1"
+alias mbt="m4b-tool"
 
 export TLDR_AUTO_UPDATE_DISABLED="true"
 
