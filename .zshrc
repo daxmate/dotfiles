@@ -237,11 +237,13 @@ zinit light Aloxaf/fzf-tab
 zinit light daxmate/openclaw-zsh-plugin
 
 export FZF_DEFAULT_OPTS='
+--style full
+--preview "bat --color always {}"
 --color=bg:237,fg:255,hl:red,marker:cyan,prompt:magenta
 --reverse
 --border=rounded
 --multi
---bind "tab:toggle+down,shift-tab:up"
+--bind "tab:down,shift-tab:up,ctrl-space:toggle"
 '
 
 # OpenClaw Completion
