@@ -200,7 +200,10 @@ export TLDR_AUTO_UPDATE_DISABLED="true"
 
 figlet -f big "HELLO DAX" | lolcat
 fortune | lolcat
-[ -f ~/.fzf.zsh ] && source <(fzf --zsh)
+# load fzf shell integration
+if command -v fzf &> /dev/null; then
+  eval "$(fzf --zsh)"
+fi
 
 # Environmental variables for jetbra cracks
 ___MY_VMOPTIONS_SHELL_FILE="${HOME}/.jetbrains.vmoptions.sh"
