@@ -234,8 +234,6 @@ export FZF_DEFAULT_OPTS='
 --multi
 --bind "tab:toggle+down,shift-tab:up"
 '
-# load deepseek_api_key
-source ~/dotfiles/ai_api_keys
 
 # OpenClaw Completion
 source "/Users/dax/.openclaw/completions/openclaw.zsh"
