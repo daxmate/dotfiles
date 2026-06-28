@@ -1,3 +1,9 @@
+# Check if homebrew installed
+if ! command -v brew &> /dev/null; then
+  echo "Homebrew not found, installing..."
+  /bin/zsh -c "$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)"
+fi
+
 # If you come from bash you might have to change your $PATH.
 export PATH=/opt/local/libexec/gnubin/:$PATH
 export PATH=/opt/homebrew/bin:$PATH
