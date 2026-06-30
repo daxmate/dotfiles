@@ -163,8 +163,8 @@ export LANGUAGE='en_US.UTF-8 git'
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
 # export CXX="/opt/homebrew/Cellar/llvm/16.0.0/bin/clang++"
-export CXX="/opt/homebrew/bin/g++-15"
-export CC="/opt/homebrew/bin/gcc-15"
+export CXX="/opt/homebrew/bin/g++-16"
+export CC="/opt/homebrew/bin/gcc-16"
 
 # vim setup
 export FCEDIT=nvim
