@@ -1,0 +1,4 @@
+# aria2 运行时文件
+*.log
+*.session
+dht.dat
