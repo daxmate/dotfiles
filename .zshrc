@@ -166,6 +166,10 @@ export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
 export CXX="/opt/homebrew/bin/g++-16"
 export CC="/opt/homebrew/bin/gcc-16"
 
+if [[ -f ~/dotfiles/secrets ]]; then
+	source secrets
+fi
+
 # vim setup
 export FCEDIT=nvim
 export EDITOR=nvim
