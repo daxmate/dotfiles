@@ -4,6 +4,8 @@ if ! command -v brew &> /dev/null; then
   /bin/zsh -c "$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)"
 fi
 
+export FPATH=$HOME/codes/zsh-comps/:$FPATH
+
 # If you come from bash you might have to change your $PATH.
 export PATH=/opt/local/libexec/gnubin/:$PATH
 export PATH=/opt/homebrew/bin:$PATH
