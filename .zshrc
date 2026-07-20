@@ -116,6 +116,8 @@ autoload bashcompinit && bashcompinit
 [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
 # add zsh-completions function folder to the FPATH
 FPATH=$ZSH_CUSTOM/plugins/zsh-completions/src:$FPATH
+# 个人补全函数集合（git@github.com:daxmate/zsh-comps.git）
+FPATH=$HOME/codes/zsh-comps:$FPATH
 FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
 source $ZSH/oh-my-zsh.sh
 
