@@ -171,7 +171,7 @@ export CXX="/opt/homebrew/bin/g++-16"
 export CC="/opt/homebrew/bin/gcc-16"
 
 if [[ -f ~/dotfiles/secrets ]]; then
-	source secrets
+	source ~/dotfiles/secrets
 fi
 
 # vim setup
