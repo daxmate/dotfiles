@@ -38,3 +38,8 @@
 	rebase = true
 [safe]
 	directory = *
+[alias]
+	today = "!git log --since=\"midnight\" --numstat --pretty=\"\" --no-merges | awk \"{add+=\\$1; del+=\\$2} END {print \\\"新增:\\\", add, \\\"删除:\\\", del, \\\"净增:\\\", add-del}\""
+	yesterday = "!git log --since=\"yesterday 00:00\" --until=\"today 00:00\" --numstat --pretty=\"\" --no-merges | awk \"{add+=\\$1; del+=\\$2} END {print \\\"新增:\\\", add, \\\"删除:\\\", del, \\\"净增:\\\", add-del}\""
+	week = "!git log --since=\"$(date -v-monday +%Y-%m-%d) 00:00\" --numstat --pretty=\"\" --no-merges | awk \"{add+=\\$1; del+=\\$2} END {print \\\"新增:\\\", add, \\\"删除:\\\", del, \\\"净增:\\\", add-del}\""
+	last7days = "!git log --since=\"7 days ago\" --numstat --pretty=\"\" --no-merges | awk \"{add+=\\$1; del+=\\$2} END {print \\\"新增:\\\", add, \\\"删除:\\\", del, \\\"净增:\\\", add-del}\""
